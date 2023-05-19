@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.ty.Shopit.Entity.User;
 
-public interface UserRepo extends JpaRepository<User, Integer> {
+public interface UserRepo extends JpaRepository<User, Long> {
 
 }

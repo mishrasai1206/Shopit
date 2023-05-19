@@ -4,9 +4,13 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import com.ty.Shopit.Enum.UserRole;
+import com.ty.Shopit.Enum.Verification;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,6 +19,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class User {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long userId;
 	private String userFirstName;
 	private String userLastName;
@@ -23,6 +29,7 @@ public class User {
 	private String userPassword;
 	private LocalDateTime userCreatedDate;
 	private UserRole userRole;
+	private Verification verification;
 
 	@OneToMany(mappedBy = "user")
 	private List<Address> addresses;
