@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.ty.Shopit.Entity.Address;
 
-public interface AddressRepo extends JpaRepository<Address, Integer>{
+public interface AddressRepo extends JpaRepository<Address, Long>{
 
 }
